@@ -3,7 +3,7 @@
 2，一套用于Library时使用，注册组件及权限，位于release目录
 
 Manifest 切换
-
+```
  sourceSets {
         main {
             if (isUserModule.toBoolean()) {
@@ -17,3 +17,4 @@ Manifest 切换
             }
         }
     }
+  ```

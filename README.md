@@ -3,6 +3,7 @@ Kotlin打造完整电商APP  模块化+MVP+主流框架
 
 ![image](https://github.com/wuchao226/KotlinMall/blob/master/image/preview.gif)
 
+![image](https://github.com/wuchao226/KotlinMall/blob/master/image/kotlin.png)
 
 ### 商品模块
 - 高仿京东APP商品分类/分类或名称搜索商品

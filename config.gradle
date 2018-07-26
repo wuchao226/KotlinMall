@@ -1,0 +1,78 @@
+ext {
+    //support
+    compileSdkVersion = 27
+    minSdkVersion = 15
+    targetSdkVersion = 27
+    supportLibVersion = "27.1.1"
+
+    //http
+    retrofitLibVersion = "2.4.0"
+    okhttpLibVersion = "3.10.0"
+    //dagger
+    daggerLibVersion = "2.16"
+    //rxlifecycle
+    rxlifecycleVersion = "2.2.1"
+    //glide
+    glide_version = "4.6.1"
+
+    androidSupport = "com.android.support"
+
+    dependencies = [
+            //support
+            supportAppCompat      : "$androidSupport:appcompat-v7:$supportLibVersion",
+            supportDesign         : "$androidSupport:design:$supportLibVersion",
+            supportRecyclerView   : "$androidSupport:recyclerview-v7:$supportLibVersion",
+            supportCardView       : "$androidSupport:cardview-v7:$supportLibVersion",
+            constraintLayout      : "com.android.support.constraint:constraint-layout:1.1.2",
+            //rx
+            rxKotlin              : 'io.reactivex.rxjava2:rxkotlin:2.2.0',
+            rxJava2               : 'io.reactivex.rxjava2:rxjava:2.1.14',
+            rxandroid             : 'io.reactivex.rxjava2:rxandroid:2.0.2',
+            //http
+            retrofit              : "com.squareup.retrofit2:retrofit:$retrofitLibVersion",
+            retrofitGsonConverter : "com.squareup.retrofit2:converter-gson:$retrofitLibVersion",
+            retrofitRxjava2Adapter: "com.squareup.retrofit2:adapter-rxjava2:$retrofitLibVersion",
+            okhttp                : "com.squareup.okhttp3:okhttp:$okhttpLibVersion",
+            okhttpLogging         : "com.squareup.okhttp3:logging-interceptor:$okhttpLibVersion",
+            //dagger
+            dagger                : "com.google.dagger:dagger:$daggerLibVersion",
+            daggerCompiler        : "com.google.dagger:dagger-compiler:$daggerLibVersion",
+            // rxlifecycle
+            rxlifecycle           : "com.trello.rxlifecycle2:rxlifecycle-kotlin:$rxlifecycleVersion",
+            rxlifecycleComponent  : "com.trello.rxlifecycle2:rxlifecycle-components:$rxlifecycleVersion",
+            //Glide
+            glide                 : "com.github.bumptech.glide:glide:$glide_version",
+            //Alert View
+            alertView             : "com.bigkoo:alertview:1.0.3",
+            //Circle ImageView
+            circleimageview       : "de.hdodenhof:circleimageview:2.2.0",
+            //Take Photo
+            takephoto             : "com.github.crazycodeboy:TakePhoto:v4.1.0",
+            //七牛
+            qiniu                 : "com.qiniu:qiniu-android-sdk:7.3.12",
+            //底部导航
+            bottom_navigation_bar : "com.ashokvarma.android:bottom-navigation-bar:2.0.4",
+            //Banner
+            banner                : "com.youth.banner:banner:1.4.10",
+            //标签
+            TriangleLabelView     : "com.github.shts:TriangleLabelView:1.1.2",
+            //画廊
+            Coverflow             : "com.github.crosswall:Android-Coverflow:release-v1.0.5",
+            //MultiStateView状态切换视图
+            MultiStateView        : "com.github.Kennyc1012:MultiStateView:1.3.2",
+            //上下拉刷新
+            BGArefreshlayout      : "cn.bingoogolapple:bga-refreshlayout:1.1.8@aar",
+            //Kotlin Bus
+            rxbus                 : "com.eightbitlab:rxbus:1.0.2",
+            //FlowLayout
+            flowlayout            : "com.hyman:flowlayout-lib:1.1.2",
+            //ARouter
+            arouter               : "com.alibaba:arouter-api:1.3.1",
+            //arouter-compiler
+            arouterCompiler       : "com.alibaba:arouter-compiler:1.1.4",
+            //numberbutton购物车商品数量、增加和减少控制按钮
+            numberbutton          : "ren.qinc.numberbutton:numberbutton:0.0.1",
+            //BadgeView
+            badgeview             : "q.rorbin:badgeview:1.1.3",
+    ]
+}

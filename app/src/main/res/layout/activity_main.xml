@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/MatchMatch.Vertical"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/mContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <com.wuc.kotlin.base.widgets.BottomNavBar
+        android:id="@+id/mBottomNavBar"
+        style="@style/MatchWrap"
+        android:layout_gravity="bottom"/>
+</LinearLayout>

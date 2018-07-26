@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/WrapWrap.Vertical"
+    android:layout_marginBottom="@dimen/common_margin"
+    android:background="@color/common_white">
+
+    <RelativeLayout style="@style/MatchWrap">
+
+        <TextView
+            style="@style/WrapWrap"
+            android:drawableLeft="@drawable/icon_shop"
+            android:drawablePadding="@dimen/common_padding_small"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/common_padding_small"
+            android:paddingLeft="@dimen/common_padding"
+            android:paddingRight="@dimen/common_padding_small"
+            android:paddingTop="@dimen/common_padding_small"
+            android:text="自营"
+            android:textColor="@color/text_light_dark"
+            tools:ignore="HardcodedText,RtlHardcoded"/>
+
+        <TextView
+            android:id="@+id/mOrderStatusNameTv"
+            style="@style/WrapWrap"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/common_padding_small"
+            android:textColor="@color/common_yellow"
+            tools:ignore="RtlHardcoded,RtlSymmetry"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/mMultiGoodsView"
+        style="@style/MatchWrap.Horizontal"
+        android:background="@color/common_bg"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/mSingleGoodsView"
+        style="@style/MatchWrap.Common"
+        android:padding="@dimen/common_padding_small">
+
+        <ImageView
+            android:id="@+id/mGoodsIconIv"
+            android:layout_width="@dimen/common_icon_width"
+            android:layout_height="@dimen/common_icon_height"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:scaleType="fitXY"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:id="@+id/mGoodsDescTv"
+            style="@style/WrapWrap"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_toRightOf="@id/mGoodsIconIv"
+            android:textSize="@dimen/text_small_size"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:id="@+id/mGoodsPriceTv"
+            style="@style/MatchWrap"
+            android:layout_alignLeft="@id/mGoodsDescTv"
+            android:layout_below="@id/mGoodsDescTv"
+            android:layout_marginTop="@dimen/common_margin_small"
+            android:textColor="@color/common_red"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:id="@+id/mGoodsCountTv"
+            style="@style/WrapWrap"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/mGoodsPriceTv"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_small_size"
+            tools:ignore="RtlHardcoded"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/mOrderInfoTv"
+        style="@style/MatchWrap"
+        android:background="@drawable/border_bottom"
+        android:gravity="right"
+        android:padding="@dimen/common_padding_small"
+        android:textSize="@dimen/text_small_size"
+        tools:ignore="RtlHardcoded"/>
+
+    <LinearLayout
+        android:id="@+id/mBottomView"
+        style="@style/MatchWrap.Horizontal"
+        android:background="@color/common_white"
+        android:gravity="right"
+        android:padding="@dimen/common_padding_small"
+        tools:ignore="RtlHardcoded">
+
+        <Button
+            android:id="@+id/mConfirmBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_marginRight="@dimen/common_margin"
+            android:background="@drawable/corner_blue_white_bg"
+            android:text="确认收货"
+            android:textColor="@color/common_blue"
+            android:textSize="@dimen/text_small_size"
+            tools:ignore="HardcodedText"/>
+
+        <Button
+            android:id="@+id/mPayBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30.0dip"
+            android:layout_marginRight="@dimen/common_margin"
+            android:background="@drawable/corner_blue_white_bg"
+            android:text="去支付"
+            android:textColor="@color/common_blue"
+            android:textSize="@dimen/text_small_size"
+            tools:ignore="HardcodedText"/>
+
+        <Button
+            android:id="@+id/mCancelBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="30.0dip"
+            android:background="@drawable/corner_gray_white_bg"
+            android:text="取消订单"
+            android:textColor="@color/text_light_dark"
+            android:textSize="@dimen/text_small_size"
+            tools:ignore="HardcodedText"/>
+    </LinearLayout>
+</LinearLayout>

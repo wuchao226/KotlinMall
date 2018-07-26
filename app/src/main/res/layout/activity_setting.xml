@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchMatch.Vertical">
+
+    <com.wuc.kotlin.base.widgets.HeaderBar
+        style="@style/MatchWrap"
+        app:titleText="设置"/>
+
+    <TextView
+        android:id="@+id/mUserProtocolTv"
+        style="@style/SettingItemStyle"
+        android:text="用户协议"
+        tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:id="@+id/mFeedBackTv"
+        style="@style/SettingItemStyle"
+        android:text="反馈意见"
+        tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:id="@+id/mAboutTv"
+        style="@style/SettingItemStyle"
+        android:text="关于"
+        tools:ignore="HardcodedText"/>
+
+    <Button
+        android:id="@+id/mLogoutBtn"
+        style="@style/FullBtnStyle"
+        android:enabled="true"
+        android:text="退出登录"
+        tools:ignore="HardcodedText"/>
+</LinearLayout>

@@ -1,0 +1,92 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // Anko Commons
+    api "org.jetbrains.anko:anko-commons:$anko_version"
+    // Appcompat-v7 (only Anko Commons)
+    api "org.jetbrains.anko:anko-appcompat-v7-commons:$anko_version"
+    // Support-v4 (only Anko Commons)
+    api "org.jetbrains.anko:anko-support-v4-commons:$anko_version"
+
+    def dependencies = rootProject.ext.dependencies
+    //Android Support
+    api dependencies.supportAppCompat
+    api dependencies.supportDesign
+    api dependencies.supportRecyclerView
+    api dependencies.supportCardView
+    api dependencies.constraintLayout
+    // RxKotlin and RxAndroid
+    api dependencies.rxKotlin
+    api dependencies.rxandroid
+    //retrofit
+    api dependencies.retrofit
+    api dependencies.retrofitGsonConverter
+    api dependencies.retrofitRxjava2Adapter
+    api dependencies.okhttp
+    api dependencies.okhttpLogging
+    //dagger
+    api dependencies.dagger
+    kapt dependencies.daggerCompiler
+    //rxlifecycle
+    api dependencies.rxlifecycle
+    api dependencies.rxlifecycleComponent
+    //glide
+    api dependencies.glide
+    //Alert View
+    api dependencies.alertView
+    //Circle ImageView
+    api dependencies.circleimageview
+    //Take Photo
+    api dependencies.takephoto
+    //七牛
+    api dependencies.qiniu
+    //底部导航
+    api dependencies.bottom_navigation_bar
+    //Banner
+    api dependencies.banner
+    //标签
+    api dependencies.TriangleLabelView
+    //画廊
+    api dependencies.Coverflow
+    //MultiStateView状态切换视图
+    api dependencies.MultiStateView
+    //上下拉刷新
+    api dependencies.BGArefreshlayout
+    //Kotlin Bus
+    api dependencies.rxbus
+    //FlowLayout
+    api dependencies.flowlayout
+    //ARouter
+    api dependencies.arouter
+    //BadgeView
+    api dependencies.badgeview
+}

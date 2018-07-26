@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              style="@style/MatchMatch.Vertical.Common">
+
+    <com.wuc.kotlin.base.widgets.HeaderBar
+        android:id="@+id/mHeaderBar"
+        style="@style/MatchWrap"
+        app:rightText="注册"
+        app:titleText="登录"/>
+
+    <LinearLayout
+        style="@style/MatchWrap.Vertical"
+        android:layout_margin="@dimen/common_margin"
+        android:background="@drawable/border_corner_all">
+
+        <EditText
+            android:id="@+id/mMobileEt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line_height"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_user_name"
+            android:drawablePadding="@dimen/common_padding_small"
+            android:hint="请输入手机号码"
+            android:inputType="phone"
+            android:paddingLeft="@dimen/common_padding_small"
+            tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry"/>
+
+        <View style="@style/DividerFixedHeight"/>
+
+        <EditText
+            android:id="@+id/mPwdEt"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_line_height"
+            android:background="@null"
+            android:drawableLeft="@drawable/icon_pwd"
+            android:drawablePadding="@dimen/common_padding_small"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:paddingLeft="@dimen/common_padding_small"
+            tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/mLoginBtn"
+        style="@style/FullBtnStyle"
+        android:text="登录"
+        tools:ignore="HardcodedText"/>
+
+    <TextView
+        android:id="@+id/mForgetPwdTv"
+        style="@style/WrapWrap"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/common_margin"
+        android:text="忘记密码？"
+        android:textColor="@color/common_blue"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+</LinearLayout>

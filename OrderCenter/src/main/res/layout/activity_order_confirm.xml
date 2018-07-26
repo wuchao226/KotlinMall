@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchMatch.Common">
+
+    <com.wuc.kotlin.base.widgets.HeaderBar
+        android:id="@+id/mHeaderBar"
+        style="@style/MatchWrap"
+        app:titleText="订单确认"/>
+
+    <TextView
+        android:id="@+id/mSelectShipTv"
+        style="@style/MatchWrap"
+        android:layout_below="@id/mHeaderBar"
+        android:background="@drawable/border_all"
+        android:drawableRight="@drawable/icon_arrow"
+        android:padding="@dimen/common_padding"
+        android:text="选择收货人"
+        android:textColor="@color/text_light_dark"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    <RelativeLayout
+        android:id="@+id/mShipView"
+        style="@style/MatchWrap"
+        android:layout_below="@id/mSelectShipTv"
+        android:layout_marginTop="@dimen/common_margin"
+        android:background="@drawable/border_all"
+        android:paddingBottom="@dimen/common_padding_middle"
+        android:paddingTop="@dimen/common_padding_middle"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/mShipNameTv"
+            style="@style/OrderShipName"/>
+
+        <TextView
+            android:id="@+id/mShipAddressTv"
+            style="@style/OrderShipAddress"
+            android:layout_below="@id/mShipNameTv"
+            android:background="@null"
+            android:paddingBottom="@dimen/common_padding_small"/>
+
+        <ImageView
+            style="@style/WrapWrap"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_margin"
+            android:src="@drawable/icon_arrow"
+            tools:ignore="RtlHardcoded"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/mOrderGoodsRv"
+        style="@style/commonRecyclerView"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mShipView"
+        android:layout_marginTop="@dimen/common_margin"/>
+
+    <RelativeLayout
+        style="@style/MatchWrap"
+        android:layout_below="@id/mOrderGoodsRv"
+        android:background="@drawable/border_all"
+        android:padding="@dimen/common_padding">
+
+        <TextView
+            style="@style/WrapWrap"
+            android:layout_centerVertical="true"
+            android:text="支付配送"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            style="@style/WrapWrap"
+            android:layout_alignParentRight="true"
+            android:lineSpacingMultiplier="1.3"
+            android:text="在线支付\n快递运输"
+            android:textColor="@color/text_light_dark"
+            tools:ignore="HardcodedText,RtlHardcoded"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mBottomView"
+        style="@style/MatchWrap"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/border_all">
+
+        <TextView
+            android:id="@+id/mTotalPriceTv"
+            style="@style/WrapWrap"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/common_red"
+            tools:ignore="RtlHardcoded"/>
+
+        <Button
+            android:id="@+id/mSubmitOrderBtn"
+            style="@style/WrapWrap"
+            android:layout_alignParentRight="true"
+            android:background="@color/common_red"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="提交订单"
+            android:textColor="@color/common_white"
+            android:textSize="@dimen/text_big_size"
+            tools:ignore="HardcodedText,RtlHardcoded"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchWrap.Vertical">
+
+    <com.wuc.kotlin.base.widgets.HeaderBar
+        android:id="@+id/mHeaderBar"
+        style="@style/MatchWrap"
+        app:titleText="订单详情"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/MatchWrap"
+                android:background="@drawable/border_bottom_gray"
+                android:paddingBottom="@dimen/common_margin_small"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingTop="@dimen/common_margin"
+                android:text="配送信息"
+                android:textColor="@color/text_light_dark"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry"/>
+
+            <com.wuc.kotlin.base.widgets.LabelTextView
+                android:id="@+id/mShipNameTv"
+                style="@style/MatchWrap"
+                app:labelText="收货人:"/>
+
+            <com.wuc.kotlin.base.widgets.LabelTextView
+                android:id="@+id/mShipMobileTv"
+                style="@style/MatchWrap"
+                app:labelText="收货电话:"/>
+
+            <com.wuc.kotlin.base.widgets.LabelTextView
+                android:id="@+id/mShipAddressTv"
+                style="@style/MatchWrap"
+                app:labelText="收货地址:"/>
+
+            <com.wuc.kotlin.base.widgets.LabelTextView
+                style="@style/MatchWrap"
+                app:contentText="快递运输"
+                app:labelText="配送方式:"/>
+
+            <TextView
+                style="@style/MatchWrap"
+                android:background="@drawable/border_bottom_gray"
+                android:paddingBottom="@dimen/common_margin_small"
+                android:paddingLeft="@dimen/common_margin"
+                android:paddingTop="@dimen/common_margin"
+                android:text="支付信息"
+                android:textColor="@color/text_light_dark"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry"/>
+
+            <com.wuc.kotlin.base.widgets.LabelTextView
+                style="@style/MatchWrap"
+                app:contentText="在线支付"
+                app:labelText="支付类型:"/>
+
+            <com.wuc.kotlin.base.widgets.LabelTextView
+                style="@style/MatchWrap"
+                app:contentText="支付宝支付"
+                app:labelText="支付方式:"/>
+
+            <com.wuc.kotlin.base.widgets.LabelTextView
+                android:id="@+id/mTotalPriceTv"
+                style="@style/MatchWrap"
+                app:labelText="实付费用:"/>
+
+            <TextView
+                style="@style/MatchWrap"
+                android:layout_marginTop="@dimen/common_margin"
+                android:background="@drawable/border_bottom"
+                android:drawableLeft="@drawable/icon_shop"
+                android:drawablePadding="@dimen/common_padding_small"
+                android:gravity="center_vertical"
+                android:paddingBottom="@dimen/common_padding_small"
+                android:paddingLeft="@dimen/common_padding"
+                android:paddingTop="@dimen/common_padding_small"
+                android:text="自营"
+                android:textColor="@color/text_light_dark"
+                tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/mOrderGoodsRv"
+                style="@style/commonRecyclerView"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>

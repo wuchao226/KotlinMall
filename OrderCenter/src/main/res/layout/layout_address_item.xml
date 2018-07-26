@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchWrap.Vertical"
+    android:layout_marginBottom="@dimen/common_margin">
+
+    <TextView
+        android:id="@+id/mShipNameTv"
+        style="@style/OrderShipName"/>
+
+    <TextView
+        android:id="@+id/mShipAddressTv"
+        style="@style/OrderShipAddress"/>
+
+    <RelativeLayout
+        style="@style/MatchWrap"
+        android:background="@drawable/border_bottom"
+        android:paddingBottom="@dimen/common_padding_middle"
+        android:paddingLeft="@dimen/common_padding"
+        android:paddingRight="@dimen/common_padding"
+        android:paddingTop="@dimen/common_padding_middle">
+
+        <TextView
+            android:id="@+id/mSetDefaultTv"
+            style="@style/WrapWrap"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:button="@null"
+            android:drawableLeft="@drawable/common_check_selector"
+            android:drawablePadding="@dimen/common_padding_middle"
+            android:gravity="center_vertical"
+            android:text="设为默认"
+            android:textColor="@color/text_normal"
+            tools:ignore="HardcodedText,RtlHardcoded"/>
+
+        <TextView
+            android:id="@+id/mEditTv"
+            style="@style/WrapWrap"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/common_margin"
+            android:layout_toLeftOf="@+id/mDeleteTv"
+            android:gravity="center_vertical"
+            android:text="@string/common_edit"
+            android:textSize="@dimen/text_small_size"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:id="@+id/mDeleteTv"
+            style="@style/WrapWrap"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="@string/common_delete"
+            android:textSize="@dimen/text_small_size"
+            tools:ignore="RtlHardcoded"/>
+    </RelativeLayout>
+</LinearLayout>

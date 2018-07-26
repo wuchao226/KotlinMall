@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/WrapWrap.Vertical"
+    android:background="@drawable/border_bottom"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/common_padding">
+
+    <CheckBox
+        android:id="@+id/mCheckedCb"
+        style="@style/WrapWrap"
+        android:layout_centerVertical="true"
+        android:button="@null"
+        android:drawableLeft="@drawable/common_check_selector"
+        tools:ignore="RtlHardcoded"/>
+
+    <ImageView
+        android:id="@+id/mGoodsIconIv"
+        android:layout_width="@dimen/common_icon_width"
+        android:layout_height="@dimen/common_icon_height"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_toRightOf="@id/mCheckedCb"
+        android:scaleType="fitXY"
+        tools:ignore="ContentDescription,RtlHardcoded"/>
+
+    <TextView
+        android:id="@+id/mGoodsDescTv"
+        style="@style/WrapWrap"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/common_margin"
+        android:layout_toRightOf="@id/mGoodsIconIv"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/text_light_dark"
+        tools:ignore="RtlHardcoded"/>
+
+    <TextView
+        android:id="@+id/mGoodsSkuTv"
+        style="@style/WrapWrap"
+        android:layout_alignLeft="@id/mGoodsDescTv"
+        android:layout_below="@id/mGoodsDescTv"
+        android:layout_marginTop="@dimen/common_margin_small"
+        android:textSize="@dimen/text_small_size"
+        tools:ignore="RtlHardcoded"/>
+
+    <TextView
+        android:id="@+id/mGoodsPriceTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/mGoodsSkuTv"
+        android:layout_below="@id/mGoodsSkuTv"
+        android:layout_marginTop="@dimen/common_margin_small"
+        android:textColor="@color/common_red"
+        android:textSize="@dimen/text_middle_size"
+        tools:ignore="RtlHardcoded"/>
+
+    <ren.qinc.numberbutton.NumberButton
+        android:id="@+id/mGoodsCountBtn"
+        style="@style/WrapWrap"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/mGoodsPriceTv"
+        tools:ignore="RtlHardcoded"/>
+</RelativeLayout>

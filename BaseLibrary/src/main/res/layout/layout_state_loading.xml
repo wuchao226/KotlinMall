@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchMatch.Common">
+
+    <TextView
+        android:id="@+id/tv_loading"
+        style="@style/WrapWrap"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/common_margin_middle"
+        android:layout_marginTop="@dimen/common_margin_small"
+        android:text="正在加载"
+        android:textColor="@color/text_normal"
+        android:textSize="@dimen/text_small_size"
+        tools:ignore="HardcodedText"/>
+
+    <View
+        android:id="@+id/loading_anim_view"
+        android:layout_width="60.0dip"
+        android:layout_height="12.0dip"
+        android:layout_below="@id/tv_loading"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/state_loading"/>
+</RelativeLayout>

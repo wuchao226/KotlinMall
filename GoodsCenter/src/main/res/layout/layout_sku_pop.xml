@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    style="@style/MatchWrap">
+
+    <RelativeLayout
+        android:id="@+id/mPopView"
+        style="@style/MatchWrap"
+        android:layout_alignParentBottom="true"
+        android:background="@color/common_white">
+
+        <ImageView
+            android:id="@+id/mCloseIv"
+            style="@style/WrapWrap"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="@dimen/common_margin"
+            android:src="@drawable/add_cart_pop_close"
+            tools:ignore="ContentDescription,RtlHardcoded"/>
+
+        <ImageView
+            android:id="@+id/mGoodsIconIv"
+            android:layout_width="@dimen/common_icon_width"
+            android:layout_height="@dimen/common_icon_height"
+            android:layout_margin="@dimen/common_margin"
+            tools:ignore="ContentDescription"/>
+
+        <TextView
+            android:id="@+id/mGoodsCodeTv"
+            style="@style/WrapWrap"
+            android:layout_alignBottom="@id/mGoodsIconIv"
+            android:layout_toRightOf="@id/mGoodsIconIv"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_small_size"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:id="@+id/mGoodsPriceTv"
+            style="@style/WrapWrap"
+            android:layout_above="@id/mGoodsCodeTv"
+            android:layout_alignLeft="@id/mGoodsCodeTv"
+            android:layout_marginBottom="@dimen/common_margin_small"
+            android:textColor="@color/common_red"
+            tools:ignore="RtlHardcoded"/>
+
+        <View
+            android:id="@+id/mDividerView"
+            style="@style/DividerFixedHeight"
+            android:layout_below="@id/mGoodsIconIv"/>
+
+        <LinearLayout
+            android:id="@+id/mSkuView"
+            style="@style/MatchWrap.Vertical"
+            android:layout_below="@id/mDividerView"
+            android:layout_margin="@dimen/common_margin"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_sku_amount"
+            style="@style/MatchWrap"
+            android:layout_alignLeft="@id/mSkuView"
+            android:layout_below="@id/mSkuView"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                style="@style/WrapWrap"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin_small"
+                android:text="数量"
+                android:textColor="@color/text_dark"
+                android:textSize="@dimen/text_small_size"
+                tools:ignore="HardcodedText"/>
+
+            <ren.qinc.numberbutton.NumberButton
+                android:id="@+id/mSkuCountBtn"
+                style="@style/WrapWrap"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/common_margin"
+                zhy:editable="false"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/mAddCartBtn"
+            style="@style/MatchWrap"
+            android:layout_below="@id/rl_sku_amount"
+            android:layout_marginTop="80dp"
+            android:background="@color/common_red"
+            android:gravity="center"
+            android:padding="@dimen/common_padding"
+            android:text="加入购物车"
+            android:textColor="@color/common_white"
+            android:textSize="@dimen/text_big_size"
+            tools:ignore="HardcodedText"/>
+    </RelativeLayout>
+</RelativeLayout>

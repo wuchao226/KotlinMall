@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/text_normal" android:state_checked="false"/> <!-- un selected -->
+    <item android:color="@color/common_blue" android:state_checked="true"/> <!-- selected -->
+    <item android:color="@color/text_normal"/> <!-- default 这个要在最底下，不然没有效果-->
+</selector>

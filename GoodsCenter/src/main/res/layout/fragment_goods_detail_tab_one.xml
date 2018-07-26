@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchMatch.Vertical.Common">
+
+    <com.youth.banner.Banner
+        android:id="@+id/mGoodsDetailBanner"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+
+    <TextView
+        android:id="@+id/mGoodsDescTv"
+        style="@style/MatchWrap"
+        android:background="@drawable/border_top"
+        android:paddingLeft="@dimen/common_padding_middle"
+        android:paddingRight="@dimen/common_padding_middle"
+        android:paddingTop="@dimen/common_padding_middle"
+        android:textColor="@color/text_normal"/>
+
+    <TextView
+        android:id="@+id/mGoodsPriceTv"
+        style="@style/MatchWrap"
+        android:background="@drawable/border_bottom"
+        android:padding="@dimen/common_padding_middle"
+        android:textColor="@color/common_red"
+        android:textSize="@dimen/text_big_size"/>
+
+    <RelativeLayout
+        android:id="@+id/mSkuView"
+        style="@style/MatchWrap"
+        android:layout_marginTop="@dimen/common_margin"
+        android:background="@drawable/border_all"
+        android:padding="@dimen/common_padding_middle">
+
+        <TextView
+            android:id="@+id/mSkuLabelTv"
+            style="@style/WrapWrap"
+            android:layout_centerVertical="true"
+            android:text="已选"
+            android:textColor="@color/text_dark"
+            android:textSize="@dimen/text_small_size"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:id="@+id/mSkuSelectedTv"
+            style="@style/WrapWrap"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:layout_marginRight="@dimen/common_margin"
+            android:layout_toLeftOf="@+id/mMoreIv"
+            android:layout_toRightOf="@id/mSkuLabelTv"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="8961蓝色，L,1件"
+            android:textColor="@color/text_light_dark"
+            tools:ignore="HardcodedText,RtlHardcoded"/>
+
+        <ImageView
+            android:id="@+id/mMoreIv"
+            style="@style/WrapWrap"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_gray_more"
+            tools:ignore="RtlHardcoded"/>
+    </RelativeLayout>
+</LinearLayout>

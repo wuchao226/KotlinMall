@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchWrap.Vertical">
+
+    <com.wuc.kotlin.base.widgets.HeaderBar
+        android:id="@+id/mHeaderBar"
+        style="@style/MatchWrap"
+        app:titleText="收银台"/>
+
+    <TextView
+        android:id="@+id/mTotalPriceTv"
+        style="@style/MatchWrap"
+        android:layout_below="@id/mHeaderBar"
+        android:gravity="right"
+        android:padding="@dimen/common_padding"
+        tools:ignore="RtlHardcoded"/>
+
+    <TextView
+        android:id="@+id/mAlipayTypeTv"
+        style="@style/OrderPayTypeStyle"
+        android:layout_below="@id/mTotalPriceTv"
+        android:drawableLeft="@drawable/pay_type_alipay"
+        android:text="支付宝支付"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    <TextView
+        android:id="@+id/mWeixinTypeTv"
+        style="@style/OrderPayTypeStyle"
+        android:layout_below="@id/mAlipayTypeTv"
+        android:drawableLeft="@drawable/pay_type_weixin"
+        android:text="微信支付"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    <TextView
+        android:id="@+id/mBankCardTypeTv"
+        style="@style/OrderPayTypeStyle"
+        android:layout_below="@id/mWeixinTypeTv"
+        android:drawableLeft="@drawable/pay_type_bank"
+        android:text="银行卡支付"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    <Button
+        android:id="@+id/mPayBtn"
+        style="@style/MatchWrap"
+        android:layout_alignParentBottom="true"
+        android:background="@color/common_red"
+        android:gravity="center"
+        android:padding="@dimen/common_padding"
+        android:text="立即支付"
+        android:textColor="@color/common_white"
+        android:textSize="@dimen/text_big_size"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MatchMatch.Vertical">
+
+    <com.wuc.kotlin.base.widgets.HeaderBar
+        style="@style/MatchWrap"
+        app:isShowBack="false"
+        app:titleText="消息"/>
+
+    <com.kennyc.view.MultiStateView
+        android:id="@+id/mMultiStateView"
+        style="@style/MultiStateStyle">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mMessageRv"
+            style="@style/commonRecyclerView"/>
+    </com.kennyc.view.MultiStateView>
+</LinearLayout>

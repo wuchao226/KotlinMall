@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchMatch.Vertical">
+
+    <LinearLayout style="@style/SearchHeaderStyle">
+
+        <ImageView
+            android:id="@+id/mLeftIv"
+            style="@style/WrapMatch"
+            android:paddingLeft="@dimen/common_padding"
+            android:paddingRight="@dimen/common_padding"
+            android:src="@drawable/icon_back"
+            tools:ignore="ContentDescription"/>
+
+        <EditText
+            android:id="@+id/mKeywordEt"
+            style="@style/SearchHeaderEtStyle"
+            android:hint="搜索商品/品类"
+            tools:ignore="HardcodedText,TextFields"/>
+
+        <TextView
+            android:id="@+id/mSearchTv"
+            style="@style/WrapWrap"
+            android:text="搜索"
+            android:textColor="@color/common_white"
+            tools:ignore="HardcodedText"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mNoDataTv"
+        style="@style/MatchMatch"
+        android:gravity="center"
+        android:text="暂无历史记录"
+        tools:ignore="HardcodedText"/>
+
+    <LinearLayout
+        android:id="@+id/mDataView"
+        style="@style/MatchMatch"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/WrapWrap"
+            android:layout_margin="@dimen/common_margin"
+            android:text="你最近的搜索历史"
+            tools:ignore="HardcodedText"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mSearchHistoryRv"
+            style="@style/commonRecyclerView"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/mClearBtn"
+            style="@style/MatchWrap"
+            android:layout_margin="30dp"
+            android:background="@drawable/corner_gray_white_bg"
+            android:padding="@dimen/common_padding"
+            android:text="清空历史搜索"
+            android:textColor="@color/text_dark"
+            tools:ignore="HardcodedText"/>
+    </LinearLayout>
+</LinearLayout>

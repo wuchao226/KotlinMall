@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchMatch.Vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150.0dip"
+        android:background="@drawable/bg_me_header"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mUserIconIv"
+            android:layout_width="@dimen/common_icon_width"
+            android:layout_height="@dimen/common_icon_height"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:src="@drawable/icon_default_user"
+            tools:ignore="RtlHardcoded"/>
+
+        <TextView
+            android:id="@+id/mUserNameTv"
+            style="@style/WrapWrap"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/common_margin"
+            android:text="@string/un_login_text"
+            android:textColor="@color/common_white"
+            android:textSize="@dimen/text_big_size"
+            tools:ignore="RtlHardcoded"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/MatchWrap.Horizontal"
+        android:background="@drawable/border_bottom"
+        android:paddingBottom="@dimen/common_padding_middle"
+        android:paddingTop="@dimen/common_padding_middle">
+
+        <TextView
+            android:id="@+id/mWaitPayOrderTv"
+            style="@style/MeOrderLabelStyle"
+            android:drawableTop="@drawable/icon_order_wait_pay"
+            android:text="待付款"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:id="@+id/mWaitConfirmOrderTv"
+            style="@style/MeOrderLabelStyle"
+            android:drawableTop="@drawable/icon_order_wait_confirm"
+            android:text="待收货"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:id="@+id/mCompleteOrderTv"
+            style="@style/MeOrderLabelStyle"
+            android:drawableTop="@drawable/icon_order_completed"
+            android:text="已完成"
+            tools:ignore="HardcodedText"/>
+
+        <View style="@style/DividerFixedWidth"/>
+
+        <TextView
+            android:id="@+id/mAllOrderTv"
+            style="@style/MeOrderLabelStyle"
+            android:drawableTop="@drawable/icon_order"
+            android:text="我的订单"
+            tools:ignore="HardcodedText"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mAddressTv"
+        style="@style/MeItemStyle"
+        android:layout_marginTop="@dimen/common_margin"
+        android:background="@drawable/border_all"
+        android:drawableLeft="@drawable/icon_address"
+        android:text="收货管理"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    <TextView
+        android:id="@+id/mShareTv"
+        style="@style/MeItemStyle"
+        android:drawableLeft="@drawable/icon_share"
+        android:text="分享"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+
+    <TextView
+        android:id="@+id/mSettingTv"
+        style="@style/MeItemStyle"
+        android:drawableLeft="@drawable/icon_setting"
+        android:text="设置"
+        tools:ignore="HardcodedText,RtlHardcoded"/>
+</LinearLayout>

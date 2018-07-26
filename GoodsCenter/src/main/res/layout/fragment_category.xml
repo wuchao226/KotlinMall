@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchMatch.Vertical.Common">
+
+    <com.wuc.kotlin.base.widgets.HeaderBar
+        style="@style/MatchWrap"
+        app:isShowBack="false"
+        app:titleText="商品分类"/>
+
+    <LinearLayout style="@style/MatchWrap.Horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mTopCategoryRv"
+            style="@style/commonRecyclerView"
+            android:layout_weight="5"/>
+
+        <LinearLayout
+            style="@style/MatchMatch.Vertical"
+            android:layout_weight="2"
+            android:paddingLeft="@dimen/common_padding"
+            android:paddingRight="@dimen/common_padding"
+            android:paddingTop="@dimen/common_padding">
+
+            <ImageView
+                android:id="@+id/mTopCategoryIv"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/category_banner"/>
+
+            <TextView
+                android:id="@+id/mCategoryTitleTv"
+                style="@style/WrapWrap"
+                android:layout_marginTop="@dimen/common_margin_middle"
+                android:text="热卖热荐"
+                android:textColor="@color/common_black"
+                android:textSize="@dimen/text_small_size"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText"/>
+
+            <com.kennyc.view.MultiStateView
+                android:id="@+id/mMultiStateView"
+                style="@style/MultiStateStyle">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mSecondCategoryRv"
+                    style="@style/commonRecyclerView"
+                    android:layout_marginTop="@dimen/common_margin_small"
+                    android:background="@drawable/border_all"
+                    android:paddingLeft="12dp"
+                    android:paddingTop="@dimen/common_padding_small"
+                    tools:ignore="RtlHardcoded,RtlSymmetry"/>
+            </com.kennyc.view.MultiStateView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

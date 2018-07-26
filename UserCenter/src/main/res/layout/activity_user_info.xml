@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchMatch.Vertical.Common">
+
+    <com.wuc.kotlin.base.widgets.HeaderBar
+        android:id="@id/mHeaderBar"
+        style="@style/MatchWrap"
+        app:rightText="@string/common_save"
+        app:titleText="个人信息"/>
+
+    <RelativeLayout
+        android:id="@+id/mUserIconView"
+        style="@style/user_info_line_style"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_margin"
+        android:paddingBottom="@dimen/common_padding_middle"
+        android:paddingTop="@dimen/common_padding_middle">
+
+        <TextView
+            style="@style/user_info_label_style"
+            android:text="头像"
+            tools:ignore="HardcodedText"/>
+
+        <ImageView
+            android:id="@+id/mArrowIv"
+            style="@style/WrapWrap"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_arrow"
+            tools:ignore="ContentDescription,RtlHardcoded"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/mUserIconIv"
+            android:layout_width="@dimen/common_icon_width"
+            android:layout_height="@dimen/common_icon_height"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20.0dip"
+            android:layout_toLeftOf="@id/mArrowIv"
+            android:src="@drawable/icon_default_user"
+            tools:ignore="RtlHardcoded"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/user_info_line_style">
+
+        <TextView
+            style="@style/user_info_label_style"
+            android:text="昵称"
+            tools:ignore="HardcodedText"/>
+
+        <EditText
+            android:id="@+id/mUserNameEt"
+            style="@style/user_info_content_style"
+            android:background="@null"
+            android:hint="请称呼我"
+            android:maxLength="10"
+            tools:ignore="HardcodedText,TextFields"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/user_info_line_style">
+
+        <TextView
+            style="@style/user_info_label_style"
+            android:text="性别"
+            tools:ignore="HardcodedText"/>
+
+        <RadioGroup
+            style="@style/WrapWrap"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            tools:ignore="RtlHardcoded">
+
+            <RadioButton
+                android:id="@+id/mGenderMaleRb"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:layout_marginRight="@dimen/common_margin"
+                android:background="@drawable/gender_bg_selector"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="男"
+                android:textColor="@drawable/gender_text_selector"
+                android:textSize="@dimen/text_middle_size"
+                tools:ignore="HardcodedText"/>
+
+            <RadioButton
+                android:id="@+id/mGenderFemaleRb"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip"
+                android:background="@drawable/gender_bg_selector"
+                android:button="@null"
+                android:gravity="center"
+                android:text="女"
+                android:textColor="@drawable/gender_text_selector"
+                android:textSize="@dimen/text_middle_size"
+                tools:ignore="HardcodedText"/>
+        </RadioGroup>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/user_info_line_style">
+
+        <TextView
+            style="@style/user_info_label_style"
+            android:text="手机"
+            tools:ignore="HardcodedText"/>
+
+        <TextView
+            android:id="@+id/mUserMobileTv"
+            style="@style/user_info_content_style"/>
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/user_info_line_style">
+
+        <TextView
+            style="@style/user_info_label_style"
+            android:text="签名"
+            tools:ignore="HardcodedText"/>
+
+        <EditText
+            android:id="@+id/mUserSignEt"
+            style="@style/user_info_content_style"
+            android:background="@null"
+            android:hint="请您填写签名"
+            android:inputType="textEmailAddress"
+            tools:ignore="HardcodedText"/>
+    </RelativeLayout>
+</LinearLayout>
